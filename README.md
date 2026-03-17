@@ -32,8 +32,10 @@ DSA301-Project/
 │
 ├── README.md
 │
-├── imagesfrompdf/
-│   └── DSA301_Project1_MertGungor_34159.pdf
+├── DSA301_Project1_MertGungor_34159.pdf
+│    
+├── imagesfrompdf
+│   ├── images
 │
 └── task3project/
     ├── index.html
@@ -41,6 +43,8 @@ DSA301-Project/
     └── src/
         ├── main.js
         └── dataset.csv
+    ...and the rest files
+    
 ```
 
 ---
@@ -80,4 +84,4 @@ The project uses **D3.js v7** and **Vite** (Vanilla JavaScript), the same tools 
 
 ## Note
 
-Only the grammar checking was done by AI. The JavaScript visualization code, data processing, chart design decisions, and all D3.js implementations are my own work. Code inspired from recitations.
+Only the grammar checking was done by AI. Writing the project, the JavaScript visualization code, data processing, chart design decisions, and all D3.js implementations are my own work. Code inspired from recitations.
