@@ -12,7 +12,7 @@ const svg = d3.select('#chart')
 .append('g')
 .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
-d3.csv('./src/dataset.csv').then(data => {
+d3.csv('./dataset.csv').then(data => {
 
   console.log(data);
 
