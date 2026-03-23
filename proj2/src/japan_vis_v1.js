@@ -80,6 +80,28 @@ d3.csv('./src/japan_immigration_statistics_inbound.csv').then(data => {
   .attr('fill', 'steelblue')
   .attr('opacity', 0.7);
 
+  svg.selectAll('.circle-asia')
+  .data(data)
+  .enter()
+  .append('circle')
+  .attr('class', 'circle-asia')
+  .attr('cx', d => x(d.year))
+  .attr('cy', d => y(d.asia))
+  .attr('r', 2)
+  .attr('fill', 'orange')
+  .attr('opacity', 0.6);
+
+  svg.selectAll('.circle-na')
+  .data(data)
+  .enter()
+  .append('circle')
+  .attr('class', 'circle-na')
+  .attr('cx', d => x(d.year))
+  .attr('cy', d => y(d.north_america))
+  .attr('r', 2)
+  .attr('fill', 'green')
+  .attr('opacity', 0.6);
+
   svg.append('text')
   .attr('x', width / 2)
   .attr('y', height + 45)
