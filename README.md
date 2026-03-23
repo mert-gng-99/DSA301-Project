@@ -85,3 +85,33 @@ The project uses **D3.js v7** and **Vite** (Vanilla JavaScript), the same tools 
 ## Note
 
 Only the grammar checking was done by AI. Writing the project, the JavaScript visualization code, data processing, chart design decisions, and all D3.js implementations are my own work. Code inspired from recitations.
+
+---
+
+# DSA 301 – Data Visualization | Project 2
+
+**Mert Güngör – 34159**
+
+## About
+
+Project 2 covers Japan Inbound Immigration data visualization 
+and WHOOP Health Dataset mobile dashboard analysis using D3.js.
+
+## How to Run
+
+1. Go into the project folder:
+cd project2
+
+2. Start a local server:
+python -m http.server 8080
+
+3. Open in browser:
+http://localhost:8080/index_japan_v1.html
+http://localhost:8080/index_japan_v2.html
+http://localhost:8080/index_whoop.html
+http://localhost:8080/whoop_sketches.html
+
+## Note
+
+All parts that do not ask for AI usage are entirely my own work.
+Code inspired from recitations.
