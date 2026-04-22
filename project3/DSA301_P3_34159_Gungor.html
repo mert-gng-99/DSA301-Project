@@ -717,13 +717,13 @@ footer .mark{font-family:var(--serif);font-size:18px;color:var(--accent-ink);let
       </div>
 
       <p style="margin-top:20px">
-      <strong>Morning (07 to 09).</strong> The map has one strong hotspot in Midtown Manhattan, a bit stronger near Penn Station and Grand Central where commuter trains arrive. People take a taxi from the station to the office. A smaller cluster is in the Financial District around Wall Street for the same reason. The Upper East Side also has a weak signal, maybe residents going to work. The outer areas (Brooklyn, Queens, Bronx) are mostly cold. JFK is very quiet because most flights arrive later in the day. The heat map shows a clear "commute into the centre" pattern, which fits the Red Dot Fever warning from the lecture: a raw dot map would mostly show where people live, but the heatmap shows where the activity is really concentrated.
+      <strong>Morning (07 to 09).</strong> One strong hotspot in Midtown near Penn Station and Grand Central (commuters to offices); small cluster around Wall Street; JFK quiet.
       </p>
       <p>
-      <strong>Midday (12 to 14).</strong> The pattern is more spread out. Midtown is still the main hotspot but the intensity is a bit lower than morning. Upper East Side, Upper West Side and the Village also show warm cells, which looks like lunch and shopping trips. The Financial District is quieter than morning because workers are already inside their offices. JFK starts to become visible as midday flights land. The map is more balanced across the island of Manhattan. This is also why bandwidth sensitivity matters: if the radius is too big, these separate midday pockets merge into one blurry blob and the spatial spread is lost.
+      <strong>Midday (12 to 14).</strong> Pattern spreads out: Midtown still leads, Upper East Side, Upper West Side, and the Village warm up (lunch, shopping); Financial District cooler; JFK starts to show.
       </p>
       <p>
-      <strong>Evening (18 to 21).</strong> The map is the busiest window. Midtown stays hot and the heat extends south to Chelsea, Meatpacking and the Village (classic nightlife and restaurant areas). The west side near 34th to 42nd Street (Times Square area) is very bright, probably from shows and tourists. JFK is visible again because of evening arrivals and departures, and LaGuardia also gives a small warm cell. The outer boroughs are still cool but a bit warmer than morning. This temporal change is exactly the reason the lecture recommends filtering and re-running KDE on subsets: one "all day" map hides three very different stories.
+      <strong>Evening (18 to 21).</strong> Busiest window. Midtown stays hot, extends to Chelsea, Meatpacking, the Village and Times Square (nightlife). JFK and LaGuardia both visible from evening flights.
       </p>
 
       <div class="code-head">Key code · heat layer, slider, filter</div>
@@ -759,7 +759,7 @@ slider.<span class="fn">addEventListener</span>(<span class="str">'input'</span>
     <div class="card honesty reveal">
       <span class="part">Academic Honesty</span>
       <h3>Short note.</h3>
-      <p>For <strong>presentation only</strong>, I used a UI styling library (UI-UX Pro Max) for cosmetic help with the HTML page: the dark/light theme colours, fonts, spacing, and card layout. It did not write any of the project logic. I also used an AI tool for grammar checks on my English writing, because my English is not perfect and I wanted the text to be easy to read. The AI only corrected small grammar mistakes. All the course work is my own: the coordinate decoding from the xlsx (divide by 10<sup>15</sup> and 10<sup>14</sup>), the 0.01&deg; grid clustering, the 4-position priority label placement with the bounding-box overlap test, the Leaflet heat layer configuration, the bandwidth slider, the temporal filter, and every written answer (Parts 1C, 1D, 2C, 3B, 3C). I read the lecture slides and the project brief myself and I chose how to solve every task.</p>
+      <p>For <strong>presentation only</strong>, I used a UI styling library (UI-UX Pro Max) for cosmetic help with the HTML page: the dark and light theme colours, fonts, spacing, and card layout. It did not write any of the project logic. I also used an AI tool for grammar checks on my English writing, because my English is not perfect and I wanted the text to be easy to read. The AI only corrected small grammar mistakes. All the course work is my own: the coordinate decoding from the xlsx (divide by 10<sup>15</sup> and 10<sup>14</sup>), the 0.01&deg; grid clustering, the 4-position priority label placement with the bounding-box overlap test, the Leaflet heat layer configuration, the bandwidth slider, the temporal filter, and every written answer (Parts 1C, 1D, 2C, 3B, 3C). I read the lecture slides and the project brief myself and I chose how to solve every task.</p>
       <div class="sig">Mert Gungor, Student ID 34159</div>
     </div>
   </div>
@@ -893,7 +893,7 @@ const themedTileLayers = [];  // keep tile layers so I can swap them
       const cls = 'hotspot-label' + (i === 0 ? ' top1' : '');
       const icon = L.divIcon({
         className: '',
-        html: `<div class="${cls}"><span class="rank">${i+1}</span>${text}</div>`,
+        html: `<div class="${cls}">${i+1} &middot; ${text}</div>`,
         iconSize: [w, h], iconAnchor: [w/2, h/2]
       });
       L.marker(labelLatLng, { icon, interactive:false }).addTo(labelLayer);
